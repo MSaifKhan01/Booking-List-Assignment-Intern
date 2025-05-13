@@ -19,7 +19,7 @@ export default function AdminDashboard({ onLogout }) {
 
   const fetchData = async () => {
     try {
-      const res = await fetch('http://localhost:5000/forms', {
+      const res = await fetch('https://booking-list-assignment-intern.onrender.com/forms', {
         headers: { Authorization: `Bearer ${token}` },
       });
       const result = await res.json();
@@ -37,8 +37,8 @@ export default function AdminDashboard({ onLogout }) {
     try {
       const method = editId ? 'PUT' : 'POST';
       const url = editId
-        ? `http://localhost:5000/forms/${editId}`
-        : 'http://localhost:5000/forms';
+        ? `https://booking-list-assignment-intern.onrender.com/forms/${editId}`
+        : 'https://booking-list-assignment-intern.onrender.com/forms';
 
       const res = await fetch(url, {
         method,
@@ -71,7 +71,7 @@ export default function AdminDashboard({ onLogout }) {
 
   const handleDelete = async (id) => {
     try {
-      const res = await fetch(`http://localhost:5000/forms/${id}`, {
+      const res = await fetch(`https://booking-list-assignment-intern.onrender.com/forms/${id}`, {
         method: 'DELETE',
         headers: { Authorization: `Bearer ${token}` },
       });

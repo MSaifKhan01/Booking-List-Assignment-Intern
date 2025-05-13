@@ -56,7 +56,7 @@ useEffect(() => {
 const handleRoleSelect = async (selectedRole) => {
   console.log("🎭 Role selected:", selectedRole);
   const token = localStorage.getItem('token');
-  const response = await fetch('http://localhost:5000/auth/set-role', {
+  const response = await fetch('https://booking-list-assignment-intern.onrender.com/auth/set-role', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -90,7 +90,7 @@ const handleRoleSelect = async (selectedRole) => {
         <Route path="/" element={
           !user ? (
             <Box sx={{ textAlign: 'center', mt: 4 }}>
-              <Button onClick={() => window.location.href = 'http://localhost:5000/auth/google'}>
+              <Button onClick={() => window.location.href = 'https://booking-list-assignment-intern.onrender.com/auth/google'}>
                 Login with Google
               </Button>
             </Box>

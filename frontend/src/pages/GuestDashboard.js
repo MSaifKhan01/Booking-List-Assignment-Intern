@@ -70,7 +70,7 @@ export default function GuestDashboard({ onLogout }) {
 
   const fetchData = async () => {
     try {
-      const res = await fetch('http://localhost:5000/forms', {
+      const res = await fetch('https://booking-list-assignment-intern.onrender.com/forms', {
         headers: { Authorization: `Bearer ${token}` },
       });
       const result = await res.json();

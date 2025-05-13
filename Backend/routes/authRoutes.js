@@ -20,7 +20,7 @@ authRouter.get(
       process.env.JWT_SECRET,
       { expiresIn: '1h' }
     );
-    res.redirect(`http://localhost:3000/auth-success?token=${token}`);
+    res.redirect(`https://booking-list-assignment-intern.vercel.app/auth-success?token=${token}`);
   }
 );
 

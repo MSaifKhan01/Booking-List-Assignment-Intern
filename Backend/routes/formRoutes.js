@@ -26,7 +26,7 @@ formRouter.post('/', Auth, RoleBase(["admin"]), async (req, res) => {
     // Check if the phone number already exists
     const existingForm = await formModel.findOne({ phone });
     if (existingForm) {
-      console.log("=============77===")
+ 
       return res.status(400).send({ msg: 'Form with this phone number already exists' });
     }
 
